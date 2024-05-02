@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+/* cSpell: disable */
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CharacterDetails from './components/CharacterDetails';
+import Home from './Home';
+import index from './index.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <main>
+        <h1>Busque seu personagem</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pessoas/:numero" element={<CharacterDetails />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 
 export default App;
+
+
