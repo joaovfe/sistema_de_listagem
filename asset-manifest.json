@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sistema_de_listagem/static/css/main.ad37ccfc.css",
+    "main.js": "/sistema_de_listagem/static/js/main.65650f45.js",
+    "static/media/star wars.jpg": "/sistema_de_listagem/static/media/star wars.fa537aa0f67f49476922.jpg",
+    "static/media/good times rg.otf": "/sistema_de_listagem/static/media/good times rg.a86d4f7f5cdb8cf2e409.otf",
+    "index.html": "/sistema_de_listagem/index.html",
+    "main.ad37ccfc.css.map": "/sistema_de_listagem/static/css/main.ad37ccfc.css.map",
+    "main.65650f45.js.map": "/sistema_de_listagem/static/js/main.65650f45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad37ccfc.css",
+    "static/js/main.65650f45.js"
+  ]
+}
