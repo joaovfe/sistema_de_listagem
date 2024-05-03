@@ -43,20 +43,29 @@ function CharacterDetails() {
 
     return (
         <div className="container-result">
-            <p>Nome: {characterInfo.name}</p>
-            <p>Gênero: {characterInfo.gender}</p>
-            <p>Ano de nascimento: {characterInfo.birth_year}</p>
-            <p>Cor dos olhos: {characterInfo.eye_color}</p>
-            <p>Filmes</p>
+            <p>Nome: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.name}</span></p>
+            <p>Gênero: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>
+                {characterInfo.gender == "male" ? (
+                    "Masculino"
+                ) : (
+                    "Feminino"
+                )}
+                </span>
+                </p>
+            <p>Ano de nascimento: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.birth_year}</span></p>
+            <p>Cor dos olhos: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.eye_color}</span></p>
+            <div className='filmes'>
+            <p>Filmes: </p>
             {filmDetails.length > 0 && (
                 <ul>
                     {filmDetails.map((film) => (
                         <li key={film.title}>
-                            {film.title} - {film.releaseDate}
+                            {film.title} <span style={{"fontStyle": "italic"}}>{film.releaseDate}</span>
                         </li>
                     ))}
                 </ul>
             )}
+            </div>
             <Link to="/">Vortar</Link>
         </div>
     );

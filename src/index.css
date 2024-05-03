@@ -58,14 +58,19 @@ main {
     border-radius: 1em;
 }
 
+main > svg {
+    width: 60vw;
+}
+
 #subtitle {
     font-size: 32px;
     text-align: center;
-    margin: 1em;
+    margin: 3vw;
 }
 
 #buscar-personagem {
-    padding: .5em 10em .5em .5em;
+    padding: .5em 10vw .5em .5em;
+    max-width: 60vw;
     font-size: 1.5rem;
     font-family: Inter;
     background-color: #fff;
@@ -75,6 +80,9 @@ main {
     color: var(--text-light-mode);
     opacity: 100%;
     margin-bottom: .5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .characters-list {
@@ -99,19 +107,34 @@ h1 {
     font-size: 3rem;
 }
 
+span {
+    font-family: "Inter";
+    color: #000;
+}
+
 .container-result {
     background-color: var(--bg-light-mode);
+    border-radius: .5em;
+    padding: .5em;
 }
 
-.container-result > p {
+.filmes {
+    margin-top: .5em;
+}
+
+.container-result p,
+.filmes > ul > li {
     color: var(--text-light-mode);
+    font-family: "Inter";
+    font-size: 1.3rem;
 }
 
-.container-result > ul {
+.filmes ul {
     list-style: none;
 }
 
-.container-result > ul > li {
-    color: #000;
-
+@media screen and (max-width: 500px) {
+    #subtitle {
+        font-size: 24px;
+    }   
 }

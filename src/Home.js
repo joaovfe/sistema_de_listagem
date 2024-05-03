@@ -44,10 +44,10 @@ function Home() {
             <input id="buscar-personagem" type="text" placeholder="Buscar personagem..." onChange={handleSearchChange} />
             {filteredPeople.length > 0 ? (
                 <ul className="characters-list">
-                    {filteredPeople.map((result) => (
-                        <Link key={result.id} to={`/pessoas/${result.id}`}>
-                            {result.name}
-                        </Link>
+                    {filteredPeople.map((result) => ( // fixme
+                            <Link key={result.id} to={`/pessoas/${result.id}`}>
+                                {result.name}
+                            </Link>
                     ))}
                 </ul>
             ) : (

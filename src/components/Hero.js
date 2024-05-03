@@ -4,8 +4,6 @@ function Hero() {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="884.822"
-            height="423.021"
             version="1.1"
             viewBox="0 0 234.109 111.924"
             xmlSpace="preserve"
