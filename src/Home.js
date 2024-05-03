@@ -52,7 +52,7 @@ function Home() {
                 </ul>
             ) : (
                 <div>
-                    <h2>Não encontrei nada com o termo "{searchTerm}"</h2>
+                    {/* <h2>Não encontrei nada com o termo "{searchTerm}"</h2> */}
                 </div>
             )
             }

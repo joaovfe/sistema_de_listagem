@@ -42,11 +42,12 @@ function CharacterDetails() {
     }, [characterInfo]);
 
     return (
-        <div className="container">
-            <p>Name: {characterInfo.name}</p>
-            <p>Gender: {characterInfo.gender}</p>
-            <p>Birthday year: {characterInfo.birth_year}</p>
-            <p>Eye colors: {characterInfo.eye_color}</p>
+        <div className="container-result">
+            <p>Nome: {characterInfo.name}</p>
+            <p>Gênero: {characterInfo.gender}</p>
+            <p>Ano de nascimento: {characterInfo.birth_year}</p>
+            <p>Cor dos olhos: {characterInfo.eye_color}</p>
+            <p>Filmes</p>
             {filmDetails.length > 0 && (
                 <ul>
                     {filmDetails.map((film) => (
