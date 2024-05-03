@@ -1,5 +1,5 @@
 /* cSpell: disable */
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom/dist';
 import CharacterDetails from './components/CharacterDetails';
 import Hero from "./components/Hero";
@@ -9,7 +9,8 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <div>
+
       <nav>
         <Link to="/"><h3>Home</h3></Link>
         <Rebelde />
@@ -22,7 +23,7 @@ function App() {
           <Route path="/pessoas/:numero" element={<CharacterDetails />} />
         </Routes>
       </main>
-    </Router>
+    </div>
   );
 }
 
