@@ -68,11 +68,16 @@ main > svg {
     margin: 3vw;
 }
 
+.div-results {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: column;
+}
+
 #buscar-personagem {
     padding: .5em 10vw .5em .5em;
-    max-width: 60vw;
     font-size: 1.5rem;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     background-color: #fff;
     outline: none;
     border: none;
@@ -125,7 +130,7 @@ span {
 .container-result p,
 .filmes > ul > li {
     color: var(--text-light-mode);
-    font-family: "Inter";
+    font-family: "Inter", sans-serif;
     font-size: 1.3rem;
 }
 
@@ -133,8 +138,16 @@ span {
     list-style: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     #subtitle {
         font-size: 24px;
     }   
+    .characters-list>a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .characters-list {
+        columns: 1;
+    }
 }

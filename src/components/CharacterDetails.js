@@ -45,7 +45,7 @@ function CharacterDetails() {
         <div className="container-result">
             <p>Nome: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.name}</span></p>
             <p>Gênero: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>
-                {characterInfo.gender == "male" ? (
+                {characterInfo.gender === "male" ? (
                     "Masculino"
                 ) : (
                     "Feminino"
