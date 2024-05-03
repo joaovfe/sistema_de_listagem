@@ -14,6 +14,8 @@ function Home() {
         }
     }, [nextPage]);
 
+
+
     const fetchData = async () => {
         try {
             const response = await fetch(nextPage);
@@ -27,6 +29,8 @@ function Home() {
         }
     };
 
+    //enquanto ter próxima página, carrega as informações dela, assim que parar de ter a próxima ele fica NULL e para de executar.
+
     const handleSearchChange = (event) => {
         const pesquisa = event.target.value.toLowerCase();
 
@@ -38,6 +42,7 @@ function Home() {
 
         setSearchTerm(pesquisa)
     };
+    //puxa o nome pelo id do personagem, conforme API.
 
     return (
         <div className='div-results'>
@@ -45,9 +50,9 @@ function Home() {
             {filteredPeople.length > 0 ? (
                 <ul className="characters-list">
                     {filteredPeople.map((result) => ( // fixme
-                            <Link key={result.id} to={`/pessoas/${result.id}`}>
-                                {result.name}
-                            </Link>
+                        <Link key={result.id} to={`/pessoas/${result.id}`}>
+                            {result.name}
+                        </Link>
                     ))}
                 </ul>
             ) : (
@@ -59,5 +64,7 @@ function Home() {
         </div >
     );
 }
+//todo: área dos favoritos, acrescentar um botão "coração" para que ele puxe para essa área;
+//fazer um darkmode/lightmode com o botão "Rebelde".
 
 export default Home;

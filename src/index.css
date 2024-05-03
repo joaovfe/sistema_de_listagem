@@ -28,7 +28,7 @@
 }
 
 html {
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./star wars.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./star wars.jpg");
 }
 
 a {
@@ -43,7 +43,7 @@ nav {
     height: 4em;
 }
 
-nav > svg{
+nav>svg {
     height: 2em;
 }
 
@@ -58,7 +58,7 @@ main {
     border-radius: 1em;
 }
 
-main > svg {
+main>svg {
     width: 60vw;
 }
 
@@ -128,7 +128,7 @@ span {
 }
 
 .container-result p,
-.filmes > ul > li {
+.filmes>ul>li {
     color: var(--text-light-mode);
     font-family: "Inter", sans-serif;
     font-size: 1.3rem;
@@ -141,7 +141,8 @@ span {
 @media screen and (max-width: 700px) {
     #subtitle {
         font-size: 24px;
-    }   
+    }
+
     .characters-list>a {
         font-size: 12px;
         white-space: nowrap;
@@ -151,3 +152,5 @@ span {
         columns: 1;
     }
 }
+
+/*fixme: background está repetindo

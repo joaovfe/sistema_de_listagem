@@ -25,6 +25,6 @@ function App() {
       </main>
     </div>
   );
-}
+} //rotas, subtítulo, botão "home", ícone "Rebelde", Título
 
 export default App;

@@ -1,11 +1,10 @@
 /* cSpell: disable */
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 function CharacterDetails() {
     const { numero } = useParams(); // useParams -> pega o número da rota ex: /pessoas/5 -> 5
-    const [characterInfo, setCharacterInfo] = useState({});
+    const [characterInfo, setCharacterInfo] = useState({}); //useState -> declara uma variável "state"
     const [filmDetails, setFilmDetails] = useState([]);
 
     const fetchCharacterInfo = async () => {
@@ -16,7 +15,7 @@ function CharacterDetails() {
         } catch (error) {
             console.error(error);
         }
-    };
+    }; //puxa informações dos personagens
 
     const fetchFilmDetails = async (filmUrl) => {
         try {
@@ -27,7 +26,7 @@ function CharacterDetails() {
             console.error(error);
             return null;
         }
-    };
+    }; //puxa informações dos filmes
 
     useEffect(() => {
         fetchCharacterInfo();
@@ -41,34 +40,38 @@ function CharacterDetails() {
         }
     }, [characterInfo]);
 
+    //atualiza informações dos filmes
+
     return (
         <div className="container-result">
-            <p>Nome: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.name}</span></p>
-            <p>Gênero: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>
+            <p>Nome: <span style={{ "fontWeight": "600", "fontFamily": "Inter, sans-serif", "color": "#000" }}>{characterInfo.name}</span></p>
+            <p>Gênero: <span style={{ "fontWeight": "600", "fontFamily": "Inter, sans-serif", "color": "#000" }}>
                 {characterInfo.gender === "male" ? (
                     "Masculino"
                 ) : (
                     "Feminino"
                 )}
-                </span>
-                </p>
-            <p>Ano de nascimento: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.birth_year}</span></p>
-            <p>Cor dos olhos: <span style={{"fontWeight": "600", "fontFamily": "Inter", "color": "#000"}}>{characterInfo.eye_color}</span></p>
+            </span>
+            </p>
+            <p>Ano de nascimento: <span style={{ "fontWeight": "600", "fontFamily": "Inter, sans-serif", "color": "#000" }}>{characterInfo.birth_year}</span></p>
+            <p>Cor dos olhos: <span style={{ "fontWeight": "600", "fontFamily": "Inter, sans-serif", "color": "#000" }}>{characterInfo.eye_color}</span></p>
             <div className='filmes'>
-            <p>Filmes: </p>
-            {filmDetails.length > 0 && (
-                <ul>
-                    {filmDetails.map((film) => (
-                        <li key={film.title}>
-                            {film.title} <span style={{"fontStyle": "italic"}}>{film.releaseDate}</span>
-                        </li>
-                    ))}
-                </ul>
-            )}
+                <p>Filmes: </p>
+                {filmDetails.length > 0 && (
+                    <ul>
+                        {filmDetails.map((film) => (
+                            <li key={film.title}>
+                                {film.title} <span style={{ "fontStyle": "italic" }}>{film.releaseDate}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
-            <Link to="/">Vortar</Link>
         </div>
     );
 }
+
+//informações dentro do cartão
+
 
 export default CharacterDetails;
