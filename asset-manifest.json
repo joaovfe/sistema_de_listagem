@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/sistema_de_listagem/static/css/main.4414ef45.css",
-    "main.js": "/sistema_de_listagem/static/js/main.7fc4c371.js",
+    "main.js": "/sistema_de_listagem/static/js/main.4fc0a015.js",
     "static/media/star wars.jpg": "/sistema_de_listagem/static/media/star wars.fa537aa0f67f49476922.jpg",
     "static/media/good times rg.otf": "/sistema_de_listagem/static/media/good times rg.a86d4f7f5cdb8cf2e409.otf",
     "index.html": "/sistema_de_listagem/index.html",
     "main.4414ef45.css.map": "/sistema_de_listagem/static/css/main.4414ef45.css.map",
-    "main.7fc4c371.js.map": "/sistema_de_listagem/static/js/main.7fc4c371.js.map"
+    "main.4fc0a015.js.map": "/sistema_de_listagem/static/js/main.4fc0a015.js.map"
   },
   "entrypoints": [
     "static/css/main.4414ef45.css",
-    "static/js/main.7fc4c371.js"
+    "static/js/main.4fc0a015.js"
   ]
 }
